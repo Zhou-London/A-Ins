@@ -13,9 +13,9 @@ Future<String> transferImage(base64Image) async {
   }
 }
 
-Future<Map<String, List<String>>> getHomePageData(likeList) async {
-  final url = Uri.parse('http://127.0.0.1:5000/require');
-  final response = await http.post(url, headers: {'Content-Type': 'application/json'}, body: jsonEncode({'likeList': jsonEncode(likeList)}));
+Future<Map<String, List<String>>> getHomePageData() async {
+  final url = Uri.parse('http://10.97.186.194:8000/get');
+  final response = await http.get(url);
   if (response.statusCode == 200) {
     final result = jsonDecode(response.body);
     return result;

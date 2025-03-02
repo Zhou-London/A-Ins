@@ -3,7 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
-import 'api.dart';
+// import 'api.dart';
 // import 'package:image/image.dart' as img;
 
 List<bool> likeList = [false, false, false, false, false, false];
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
     'assets/images/out_table.png',
     'assets/images/out_ue.png',
     'assets/images/out_uika.png',
-    'assets/images/out_what.png'
+    'assets/images/out_flower.png'
   ];
   List<String> textList = [
     'This is an image about blender.',
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
     'This is an image about a table with one computer and three drinks and a bag of tissue.',
     'This is an image about unreal engine.',
     'This is an image about a drawing of Uika.',
-    'This is an image about what.'
+    'This is an image about a flower.'
   ];
   List<String> contentList = [
     'I am working on blender...',
@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
     'I am attending HackLondon',
     'I am working with Unreal Engine',
     'What a beautful drawing of Uika',
-    'What are we look for?'
+    'This flower is genreated by AI'
   ];
   List<List<String>> tagList = [
     ['technology', 'art'],
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
     ['technology'],
     ['technology', 'art'],
     ['art'],
-    ['technology']
+    ['art']
   ];
 
   void empty() {
@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> refresh() async {
     empty();
-    // final result = await getHomePageData(likeList);
+    // final result = await getHomePageData();
     // setState(() {
     //   for (int i = 0; i < imagePathList.length; i++) {
     //     deleteImage(imagePathList[i]);
