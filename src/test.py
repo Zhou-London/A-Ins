@@ -12,6 +12,10 @@ from Services.bing_crawler import BingNewsCrawler
 # print(openai_agent.process_image({"content": "flower"}))
 # response = openai_agent.process_news("politics")
 
-response = openai_agent.process_news("art")
 
 # print(solr_agent.search_posts_test("art"))
+
+response = openai_agent.process_news("art")
+response = openai_agent.process_news("technology")
+response = openai_agent.process_news("amusement")
+# print(solr_agent.random_post())

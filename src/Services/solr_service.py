@@ -3,6 +3,7 @@ Service of Solr
 """
 
 from Config.solr_config import solr
+import random
 
 
 class Agent:
@@ -51,8 +52,13 @@ class Agent:
 
     def info(self):
         query = "*:*"
-        results = solr.search(query, fl="id, title")
+        results = solr.search(query)
         return [dict(result) for result in results]
+
+    def random_post(self):
+        results = self.info()
+        random_int = random.randint(0, len(results) - 1)
+        return results[random_int]
 
 
 solr_agent = Agent()

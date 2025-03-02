@@ -26,3 +26,11 @@ class limited_json(BaseModel):
 
 class BoolListRequest(BaseModel):
     bool_list: list[bool]
+
+
+class JsonResponse(BaseModel):
+    id: str
+    title: str
+    content: str
+    image: str
+    tags: list[str]
